@@ -1,0 +1,82 @@
+/* === Media Query === */
+@media (max-width: 833px) {
+  body h1#title {
+    font-size: 25px;
+  }
+  div.whole1 {
+    width: 85%;
+    padding: 5px;
+    padding-top: 10px;
+  }
+  div.whole1 p#description {
+    font-size: 14px;
+  }
+  form div.whole2 div.labels {
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    line-height: 1.5;
+  }
+  form div.whole2 div.rightside {
+    width: 100%;
+    font-size: 14px;
+  }
+  form .input-field {
+    width: 200px;
+    height: 15px;
+  }
+  form div.radios, div.checkboxes {
+    margin-top: 0;
+  }
+  form button#submit {
+    width: 80px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  body h1#title {
+    font-size: 20px;
+  }
+  div.whole1 {
+    width: 90%;
+    padding: 5px;
+    padding-top: 10px;
+  }
+  div.whole1 p#description {
+    font-size: 12px;
+  }
+  form {
+    margin-left: 15px;
+  }
+  form div.whole2 div.labels {
+    font-size: 14px;
+    width: 70%;
+    display: block;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  form div.whole2 div.rightside {
+    width: 48%;
+    font-size: 14px;
+    display: block;
+  }
+  form .input-field {
+    width: 170px;
+    height: 15px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  form .dropdown {
+    margin: 0;
+    margin-left: 10px;
+  }
+  form button#submit {
+    width: 80px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
