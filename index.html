@@ -1,136 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="true">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-  <!-- icon library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--[if lt IE 9] -->
-   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-   <!--[endif]-->
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="media.css">
-</head>
-
-<body>
-  <header id="header">
-    <img id="header-img" src="https://cdn1.imggmi.com/uploads/2018/7/8/a47170d66dade4d6b8fbd56def01373e-full.png" alt="Company Logo">
-    <nav id="nav-bar">
-      <ul>
-        <a class="nav-link" href="#features"><li>Features</li></a>
-        <a class="nav-link" href="#how"><li>How it works</li></a>
-        <a class="nav-link" href="#pricing"><li>Pricing</li></a>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="section1">
-    <div class="middletitle">
-      <h1>iPhone X</h1>
-      <h2>Say hello to the future.</h2>
-    </div>
-    <div class="signin">
-      <form id="form" class="signin" action="https://www.freecodecamp.com/email-submit" method="post">
-        <input id="email" type="email" name="email" placeholder="Enter your email here" required>
+<html>
+  <head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <title>Survey Form - #FCC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <div class="whole1">
+      <p id="description">Let us know how we can improve freeCodeCamp</p>
+      <form id="survey-form">
+        <div class="whole2">
+          <div class="labels">
+            <label id="name-label" for="name">* Name:</label>
+          </div>
+          <div class="rightside">
+            <input class="input-field" type="text" name="name" placeholder="Enter you name" id="name" required>
+          </div>
+        </div>
         <br>
-        <input id="submit" type="submit" name="button" value="Submit">
+        <div class="whole2">
+          <div class="labels">
+            <label id="email-label" for="email">* Email:</label>
+          </div>
+          <div class="rightside">
+            <input class="input-field" type="email" name="email" placeholder="Enter your Email" id="email" required>
+          </div>
+        </div>
+        <br>
+        <div class="whole2">
+          <div class="labels">
+            <label id="number-label" for="number">* Age:</label>
+          </div>
+          <div class="rightside">
+            <input class="input-field" type="number" name="age" placeholder="Age" id="number" min="1" max="120" required>
+          </div>
+        </div>
+        <div class="whole2">
+          <div class="labels">
+            <label for="currentRole">Which option best describes your current role?</label>
+          </div>
+          <div class="rightside">
+            <select id="dropdown" class="dropdown" name="currentRole">
+              <option disabled selected value>Select an option</option>
+              <option value="student">Student</option>
+              <option value="job">Full time job</option>
+              <option value="learner">Full time learner</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">other</option>
+            </select>
+          </div>
+        </div>
+        <div class="whole2">
+          <div class="labels">
+            <label for="recommend">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+          </div>
+          <div class="rightside radios"> <!--  <ul style="list-style: none;">
+            <li class="radio"><label>Definitely<input class="userRatings" type="radio" name="radio" value="1"></label></li>
+          </ul> -->
+            <input type="radio" name="recommend" value="1"> Definitely <br>
+            <input type="radio" name="recommend" value="2"> Maybe <br>
+            <input type="radio" name="recommend" value="3"> Not sure
+          </div>
+        </div>
+        <div class="whole2">
+          <div class="labels">
+            <label for="mostLike">What do you like you most in FCC: </label>
+          </div>
+          <div class="rightside">
+            <select id="mostLike" class="dropdown" name="mostLike">
+              <option disabled selected value>Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="community">Community</option>
+              <option value="openSource">Open Source</option>
+            </select>
+          </div>
+        </div>
+        <div class="whole2">
+          <div class="labels">
+            <label for="future">Things that should be improved in the future (Check all that apply):</label>
+          </div>
+          <div class="rightside checkboxes">
+            <input type="checkbox" name="future" value="1">Front-end Projects <br>
+            <input type="checkbox" name="future" value="2">Back-end Projects <br>
+            <input type="checkbox" name="future" value="3">Data Visualization <br>
+            <input type="checkbox" name="future" value="4">Challenges <br>
+            <input type="checkbox" name="future" value="5">Open Source Community <br>
+            <input type="checkbox" name="future" value="6">Gitter help rooms <br>
+            <input type="checkbox" name="future" value="7">Videos <br>
+            <input type="checkbox" name="future" value="8">City Meetups <br>
+            <input type="checkbox" name="future" value="9">Wiki <br>
+            <input type="checkbox" name="future" value="10">Forum <br>
+            <input type="checkbox" name="future" value="11">Additional Courses <br>
+          </div>
+        </div>
+        <div class="whole2">
+          <div class="labels">
+            <label for="comment">Any Comments or Suggestions?</label>
+          </div>
+          <div class="rightside">
+            <textarea id="comment" class="input-field" name="comment" placeholder="Enter your comment here..."></textarea>
+          </div>
+        </div>
+        <button id="submit" type="submit">Submit</button>
       </form>
     </div>
-  </div>
-  <div class="product">
-      <div class="productpic">
-        <img src="https://cdn1.imggmi.com/uploads/2018/7/9/80a0cb836e4cc72afdeb2c7f2e20b8d1-full.png" alt="iPhone X">
-      </div>
-      <div id="features">
-        <div class="feature1 feature">
-          <div class="icon">
-            <i class="fa fa-3x fa-fire"></i>
-          </div>
-          <div class="featuretext">
-            <h2>Super Retina Display</h2>
-            <p>With iPhone X, the device is the display. An all‑new 5.8‑inch Super Retina screen fills the hand and dazzles the eyes.</p>
-          </div>
-        </div>
-        <div class="feature2 feature">
-          <div class="icon">
-            <i class="fa fa-3x fa-truck"></i>
-          </div>
-          <div class="featuretext">
-            <h2>Innovative Technology</h2>
-            <p>The display employs new techniques and technology to precisely follow the curves of the design, all the way to the elegantly rounded corners.</p>
-          </div>
-        </div>
-        <div class="feature3 feature">
-          <div class="icon">
-            <i class="fa fa-3x fa-battery-full"></i>
-          </div>
-          <div class="featuretext">
-            <h2>OLED Designed for iPhone X</h2>
-            <p>The first OLED screen that rises to the standards of iPhone, with accurate, stunning colors, true blacks, high brightness, and a 1,000,000 to 1 contrast ratio.</p>
-          </div>
-        </div>
-      </div>
-      <div class="purchase">
-        <a href="https://www.apple.com/shop/buy-iphone/iphone-x" target="_blank"><button type="button" name="button">Purchase Now!</button></a>
-      </div>
-  </div>
-  <div id="how" class="videox">
-    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/K4wEI5zhHB0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
-  <div id="pricing" class="price">
-    <div class="left list">
-      <ul><h2>64GB</h2>
-        <li class="first">$999</li>
-        <li>Space Gray</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum dolor</li>
-        <li>Lorem ipsum</li>
-      </ul>
-      <button type="button" name="button">Pick Up</button>
-    </div>
-    <div class="center list">
-      <ul><h2>256GB</h2>
-        <li class="first">$1149</li>
-        <li>Space Gray</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum dolor</li>
-        <li>Lorem ipsum</li>
-      </ul>
-      <button type="button" name="button">Pick Up</button>
-    </div>
-    <div class="right list">
-      <ul><h2>another storage</h2>
-        <li class="first">$1500</li>
-        <li>Space Gray</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum dolor</li>
-        <li>Lorem ipsum</li>
-      </ul>
-      <button type="button" name="button">Pick Up</button>
-    </div>
-  </div>
-  <footer>
-    <ul>
-      <a href="#"><li>Privacy</li></a>
-      <a href="#"><li>Terms</li></a>
-      <a href="#"><li>Contact</li></a>
-    </ul>
-    <h3>Developed and Created by Shay Koala 2018 &copy; All Copy Rights Reserved</h3>
-  </footer>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
